@@ -1,0 +1,50 @@
+---
+const differentials = [
+  { title: 'Atendimento humanizado', description: 'Cada cliente é único. Nosso atendimento é personalizado e atento às suas necessidades.' },
+  { title: 'Processos detalhados', description: 'Metodologia rigorosa em cada etapa, garantindo consistência e excelência.' },
+  { title: 'Mão de obra qualificada', description: 'Profissionais treinados e apaixonados por estética automotiva.' },
+  { title: 'Foco em pessoas exigentes', description: 'Entendemos e superamos as expectativas dos clientes mais perfeccionistas.' },
+  { title: 'Experiência premium', description: 'Ambiente e processo pensados para oferecer conforto e exclusividade.' },
+  { title: 'Cuidado com cada etapa', description: 'Do recebimento à entrega, cada fase é executada com máxima atenção.' },
+];
+---
+
+<section id="diferenciais" class="relative py-16 md:py-28 bg-boc-black-soft grain-overlay">
+  <div class="relative z-10 max-w-[1180px] mx-auto px-5 md:px-8 lg:px-16">
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+      <div class="font-heading text-xs uppercase tracking-boc-wider text-boc-orange font-semibold mb-4">
+        Por que Bocuccis
+      </div>
+      
+      <h2 class="font-display font-bold text-3xl md:text-4xl lg:text-5xl tracking-boc-tight text-boc-white leading-tight mb-6">
+        Diferenciais que elevam o padrão.
+      </h2>
+      
+      <div class="w-16 h-1 bg-boc-orange mx-auto" />
+    </div>
+    
+    <!-- Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {differentials.map((item, index) => (
+        <div class="group relative bg-boc-card-dark/50 border border-white/10 rounded-boc-lg p-6 md:p-8 hover:bg-boc-card-dark transition-all duration-250">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-boc-orange/15 border border-boc-orange/30 rounded-boc-md flex items-center justify-center">
+              <span class="font-technical text-sm font-bold text-boc-orange">0{index + 1}</span>
+            </div>
+            
+            <div>
+              <h3 class="font-heading font-semibold text-base uppercase tracking-boc-wide text-boc-white mb-2">
+                {item.title}
+              </h3>
+              
+              <p class="font-body text-sm text-boc-gray leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

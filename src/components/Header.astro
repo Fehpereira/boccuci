@@ -1,0 +1,97 @@
+---
+const navLinks = [
+  { href: '#inicio', label: 'Início' },
+  { href: '#sobre', label: 'Sobre' },
+  { href: '#servicos', label: 'Serviços' },
+  { href: '#diferenciais', label: 'Diferenciais' },
+  { href: '#galeria', label: 'Galeria' },
+  { href: '#contato', label: 'Contato' },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-boc-black/80 backdrop-blur-md border-b border-white/10">
+  <div class="max-w-[1180px] mx-auto px-5 md:px-8 lg:px-16">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <!-- Logo -->
+      <a href="#inicio" class="font-display font-bold text-xl md:text-2xl tracking-boc-wide text-boc-white hover:text-boc-orange transition-colors duration-250">
+        BOCCUCIS
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8">
+        {navLinks.map((link) => (
+          <a 
+            href={link.href} 
+            class="font-heading text-sm uppercase tracking-boc-wide text-boc-gray-light hover:text-boc-orange transition-colors duration-250 relative group"
+          >
+            {link.label}
+            <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-boc-orange transition-all duration-250 group-hover:w-full" />
+          </a>
+        ))}
+      </nav>
+      
+      <!-- CTA Button -->
+      <a 
+        href="#contato" 
+        class="hidden md:inline-flex items-center px-5 py-2.5 bg-boc-orange text-white font-heading text-sm uppercase tracking-boc-wide font-bold rounded-boc-md hover:bg-boc-orange-hover hover:shadow-boc-orange-glow transition-all duration-250 hover:-translate-y-0.5"
+      >
+        Agendar avaliação
+      </a>
+      
+      <!-- Mobile Menu Button -->
+      <button 
+        id="mobile-menu-btn" 
+        class="md:hidden flex flex-col gap-1.5 p-2"
+        aria-label="Menu"
+      >
+        <span class="w-6 h-0.5 bg-boc-white transition-transform duration-250" />
+        <span class="w-6 h-0.5 bg-boc-white transition-opacity duration-250" />
+        <span class="w-6 h-0.5 bg-boc-white transition-transform duration-250" />
+      </button>
+    </div>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden bg-boc-black-soft border-t border-white/10">
+    <div class="px-5 py-4 space-y-3">
+      {navLinks.map((link) => (
+        <a 
+          href={link.href} 
+          class="block font-heading text-sm uppercase tracking-boc-wide text-boc-gray-light hover:text-boc-orange transition-colors duration-250 py-2"
+        >
+          {link.label}
+        </a>
+      ))}
+      <a 
+        href="#contato" 
+        class="block w-full text-center px-5 py-3 bg-boc-orange text-white font-heading text-sm uppercase tracking-boc-wide font-bold rounded-boc-md mt-4"
+      >
+        Agendar avaliação
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const spans = btn?.querySelectorAll('span');
+  
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+    if (spans && spans.length === 3) {
+      spans[0].classList.toggle('rotate-45');
+      spans[0].classList.toggle('translate-y-2');
+      spans[1].classList.toggle('opacity-0');
+      spans[2].classList.toggle('-rotate-45');
+      spans[2].classList.toggle('-translate-y-2');
+    }
+  });
+  
+  // Close menu on link click
+  menu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+    });
+  });
+</script>

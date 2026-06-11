@@ -1,0 +1,286 @@
+{
+  "brand": {
+    "name": "Bocuccis",
+    "segment": "Estética Automotiva",
+    "personality": [
+      "premium",
+      "esportiva",
+      "técnica",
+      "agressiva",
+      "detalhista",
+      "sofisticada"
+    ],
+    "visualReferences": [
+      "Lamborghini STO",
+      "diamante",
+      "formas hexagonais",
+      "linhas retas",
+      "alto contraste",
+      "texturas automotivas",
+      "acabamento escuro premium"
+    ]
+  },
+  "colors": {
+    "primary": {
+      "orange": "#F4511E",
+      "orangeHover": "#FF6333",
+      "orangeMuted": "#C83A14"
+    },
+    "neutral": {
+      "black": "#101010",
+      "blackSoft": "#151515",
+      "charcoal": "#242424",
+      "graphite": "#3F3F3F",
+      "grayDark": "#666666",
+      "gray": "#9A9A9A",
+      "grayLight": "#CFCFCF",
+      "silver": "#E8E8E8",
+      "white": "#F5F5F5"
+    },
+    "background": {
+      "page": "#101010",
+      "sectionDark": "#151515",
+      "sectionLight": "#CFCFCF",
+      "cardDark": "#1C1C1C",
+      "cardLight": "#E2E2E2",
+      "overlayDark": "rgba(0, 0, 0, 0.72)",
+      "overlaySoft": "rgba(0, 0, 0, 0.45)"
+    },
+    "text": {
+      "primaryDark": "#F5F5F5",
+      "secondaryDark": "#B8B8B8",
+      "mutedDark": "#777777",
+      "primaryLight": "#101010",
+      "secondaryLight": "#3F3F3F",
+      "mutedLight": "#666666",
+      "accent": "#F4511E"
+    },
+    "border": {
+      "dark": "rgba(255, 255, 255, 0.12)",
+      "light": "rgba(16, 16, 16, 0.14)",
+      "accent": "rgba(244, 81, 30, 0.65)"
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "display": "Orbitron, Rajdhani, Eurostile, sans-serif",
+      "heading": "Rajdhani, Orbitron, sans-serif",
+      "body": "Inter, Sora, Arial, sans-serif",
+      "technical": "Orbitron, monospace"
+    },
+    "fontWeight": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700,
+      "black": 900
+    },
+    "letterSpacing": {
+      "tight": "-0.02em",
+      "normal": "0",
+      "wide": "0.08em",
+      "wider": "0.14em",
+      "ultraWide": "0.28em"
+    },
+    "textTransform": {
+      "headings": "uppercase",
+      "buttons": "uppercase",
+      "eyebrow": "uppercase"
+    },
+    "scale": {
+      "xs": "0.75rem",
+      "sm": "0.875rem",
+      "base": "1rem",
+      "lg": "1.125rem",
+      "xl": "1.25rem",
+      "2xl": "1.5rem",
+      "3xl": "2rem",
+      "4xl": "2.75rem",
+      "5xl": "4rem",
+      "hero": "5rem"
+    }
+  },
+  "radius": {
+    "none": "0px",
+    "sm": "2px",
+    "md": "6px",
+    "lg": "10px",
+    "xl": "16px",
+    "pill": "999px"
+  },
+  "spacing": {
+    "sectionY": {
+      "mobile": "4rem",
+      "desktop": "7rem"
+    },
+    "containerX": {
+      "mobile": "1.25rem",
+      "tablet": "2rem",
+      "desktop": "4rem"
+    },
+    "containerMax": "1180px",
+    "cardPadding": {
+      "sm": "1rem",
+      "md": "1.5rem",
+      "lg": "2rem"
+    }
+  },
+  "shadows": {
+    "soft": "0 20px 60px rgba(0, 0, 0, 0.28)",
+    "strong": "0 28px 90px rgba(0, 0, 0, 0.45)",
+    "orangeGlow": "0 0 32px rgba(244, 81, 30, 0.38)",
+    "insetDark": "inset 0 1px 0 rgba(255, 255, 255, 0.08)"
+  },
+  "gradients": {
+    "heroDark": "linear-gradient(135deg, #101010 0%, #1A1A1A 45%, #2A2A2A 100%)",
+    "orangeAccent": "linear-gradient(135deg, #F4511E 0%, #FF6A2A 100%)",
+    "metalLight": "linear-gradient(135deg, #F5F5F5 0%, #CFCFCF 50%, #AFAFAF 100%)",
+    "cardDark": "linear-gradient(145deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.02) 100%)",
+    "darkToTransparent": "linear-gradient(90deg, rgba(16,16,16,0.96) 0%, rgba(16,16,16,0.58) 55%, rgba(16,16,16,0.12) 100%)"
+  },
+  "patterns": {
+    "grain": {
+      "opacity": 0.12,
+      "description": "Textura leve de ruído para dar aparência editorial/premium."
+    },
+    "hexagon": {
+      "stroke": "rgba(255, 255, 255, 0.16)",
+      "accentStroke": "rgba(244, 81, 30, 0.55)",
+      "description": "Formas hexagonais inspiradas no símbolo e no diamante."
+    },
+    "diagonalPanels": {
+      "angle": "12deg",
+      "description": "Blocos diagonais e recortes geométricos para remeter a velocidade e design automotivo."
+    }
+  },
+  "components": {
+    "button": {
+      "primary": {
+        "background": "#F4511E",
+        "color": "#FFFFFF",
+        "border": "1px solid #F4511E",
+        "borderRadius": "6px",
+        "fontWeight": 700,
+        "letterSpacing": "0.08em",
+        "textTransform": "uppercase",
+        "boxShadow": "0 0 32px rgba(244, 81, 30, 0.28)"
+      },
+      "secondary": {
+        "background": "transparent",
+        "color": "#F5F5F5",
+        "border": "1px solid rgba(255, 255, 255, 0.18)",
+        "borderRadius": "6px",
+        "fontWeight": 700,
+        "letterSpacing": "0.08em",
+        "textTransform": "uppercase"
+      },
+      "ghost": {
+        "background": "transparent",
+        "color": "#CFCFCF",
+        "border": "none",
+        "fontWeight": 600,
+        "letterSpacing": "0.08em",
+        "textTransform": "uppercase"
+      }
+    },
+    "card": {
+      "dark": {
+        "background": "#1C1C1C",
+        "border": "1px solid rgba(255, 255, 255, 0.12)",
+        "borderRadius": "10px",
+        "boxShadow": "0 20px 60px rgba(0, 0, 0, 0.28)"
+      },
+      "light": {
+        "background": "#E2E2E2",
+        "border": "1px solid rgba(16, 16, 16, 0.14)",
+        "borderRadius": "10px",
+        "boxShadow": "0 20px 60px rgba(0, 0, 0, 0.16)"
+      },
+      "accent": {
+        "background": "linear-gradient(145deg, #F4511E 0%, #C83A14 100%)",
+        "color": "#FFFFFF",
+        "borderRadius": "10px"
+      }
+    },
+    "section": {
+      "dark": {
+        "background": "#101010",
+        "color": "#F5F5F5"
+      },
+      "light": {
+        "background": "#CFCFCF",
+        "color": "#101010"
+      },
+      "split": {
+        "background": "linear-gradient(90deg, #101010 0%, #101010 50%, #CFCFCF 50%, #CFCFCF 100%)"
+      }
+    },
+    "badge": {
+      "background": "rgba(244, 81, 30, 0.14)",
+      "color": "#F4511E",
+      "border": "1px solid rgba(244, 81, 30, 0.45)",
+      "borderRadius": "999px",
+      "letterSpacing": "0.14em",
+      "textTransform": "uppercase"
+    }
+  },
+  "imagery": {
+    "style": [
+      "preto e branco com detalhes em laranja",
+      "carros esportivos",
+      "detalhes de pintura",
+      "brilho, reflexo e acabamento",
+      "close-up de rodas, lataria e espuma",
+      "composição editorial"
+    ],
+    "treatment": {
+      "default": "grayscale",
+      "accent": "orange highlights",
+      "contrast": "high",
+      "overlay": "dark gradient",
+      "texture": "subtle grain"
+    }
+  },
+  "motion": {
+    "duration": {
+      "fast": "150ms",
+      "normal": "250ms",
+      "slow": "500ms"
+    },
+    "easing": {
+      "default": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "sharp": "cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    "interactions": {
+      "buttonHover": {
+        "transform": "translateY(-2px)",
+        "boxShadow": "0 0 32px rgba(244, 81, 30, 0.38)"
+      },
+      "cardHover": {
+        "transform": "translateY(-4px)",
+        "borderColor": "rgba(244, 81, 30, 0.55)"
+      }
+    }
+  },
+  "layout": {
+    "style": "editorial automotivo premium",
+    "composition": [
+      "seções com contraste escuro/claro",
+      "grid assimétrico",
+      "cards com imagens em preto e branco",
+      "recortes diagonais",
+      "elementos hexagonais",
+      "títulos grandes e espaçados"
+    ],
+    "hero": {
+      "preferredBackground": "imagem de carro em preto e branco com overlay escuro",
+      "contentAlignment": "left",
+      "ctaPosition": "below headline",
+      "accentElements": [
+        "linha laranja",
+        "badge superior",
+        "monograma ou símbolo em marca d'água"
+      ]
+    }
+  }
+}

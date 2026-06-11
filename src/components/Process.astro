@@ -1,0 +1,79 @@
+---
+const steps = [
+  { number: '01', title: 'Avaliação do veículo', description: 'Análise detalhada do estado atual e identificação das necessidades.' },
+  { number: '02', title: 'Definição do serviço ideal', description: 'Recomendação personalizada com base na avaliação técnica.' },
+  { number: '03', title: 'Execução técnica', description: 'Aplicação dos processos com precisão e cuidado meticuloso.' },
+  { number: '04', title: 'Revisão de acabamento', description: 'Inspeção rigorosa para garantir a qualidade esperada.' },
+  { number: '05', title: 'Entrega com orientação', description: 'Devolução do veículo com dicas de manutenção e cuidados.' },
+];
+---
+
+<section class="relative py-16 md:py-28 bg-boc-black">
+  <div class="max-w-[1180px] mx-auto px-5 md:px-8 lg:px-16">
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+      <div class="font-heading text-xs uppercase tracking-boc-wider text-boc-orange font-semibold mb-4">
+        Nosso processo
+      </div>
+      
+      <h2 class="font-display font-bold text-3xl md:text-4xl lg:text-5xl tracking-boc-tight text-boc-white leading-tight mb-6">
+        Etapas claras para um resultado impecável.
+      </h2>
+      
+      <div class="w-16 h-1 bg-boc-orange mx-auto" />
+    </div>
+    
+    <!-- Timeline Desktop -->
+    <div class="hidden md:block relative">
+      <!-- Line -->
+      <div class="absolute top-12 left-0 right-0 h-px bg-white/10" />
+      
+      <div class="grid grid-cols-5 gap-8">
+        {steps.map((step) => (
+          <div class="relative text-center">
+            <!-- Number -->
+            <div class="relative z-10 w-24 h-24 mx-auto bg-boc-card-dark border border-boc-orange/40 rounded-full flex items-center justify-center mb-6">
+              <span class="font-technical text-2xl font-bold text-boc-orange">{step.number}</span>
+            </div>
+            
+            <!-- Content -->
+            <h3 class="font-heading font-semibold text-sm uppercase tracking-boc-wide text-boc-white mb-2">
+              {step.title}
+            </h3>
+            
+            <p class="font-body text-xs text-boc-gray leading-relaxed">
+              {step.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+    
+    <!-- Timeline Mobile -->
+    <div class="md:hidden space-y-8">
+      {steps.map((step, index) => (
+        <div class="flex gap-4">
+          <div class="flex-shrink-0">
+            <div class="w-16 h-16 bg-boc-card-dark border border-boc-orange/40 rounded-full flex items-center justify-center">
+              <span class="font-technical text-lg font-bold text-boc-orange">{step.number}</span>
+            </div>
+            
+            {index < steps.length - 1 && (
+              <div class="w-px h-full bg-white/10 mx-auto mt-2" />
+            )}
+          </div>
+          
+          <div class="pb-8">
+            <h3 class="font-heading font-semibold text-base uppercase tracking-boc-wide text-boc-white mb-2">
+              {step.title}
+            </h3>
+            
+            <p class="font-body text-sm text-boc-gray leading-relaxed">
+              {step.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

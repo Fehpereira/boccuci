@@ -1,0 +1,80 @@
+---
+const services = [
+  {
+    title: 'Detalhamento automotivo',
+    description: 'Limpeza técnica e minuciosa para restaurar a aparência e preservar cada detalhe do veículo.',
+    icon: 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z',
+  },
+  {
+    title: 'Higienização interna',
+    description: 'Cuidado profundo para bancos, carpetes, painéis e áreas internas, priorizando conforto e bem-estar.',
+    icon: 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z',
+  },
+  {
+    title: 'Polimento técnico',
+    description: 'Correção de pintura com foco em brilho, profundidade e acabamento refinado.',
+    icon: 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z',
+  },
+  {
+    title: 'Vitrificação',
+    description: 'Proteção de alta performance para pintura, aumentando resistência, brilho e durabilidade.',
+    icon: 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z',
+  },
+  {
+    title: 'Lavagem premium',
+    description: 'Processo cuidadoso, seguro e detalhado para quem não aceita uma lavagem comum.',
+    icon: 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z',
+  },
+  {
+    title: 'Revitalização de acabamento',
+    description: 'Tratamento para devolver presença, contraste e sofisticação ao veículo.',
+    icon: 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z',
+  },
+];
+---
+
+<section id="servicos" class="relative py-16 md:py-28 bg-boc-black grain-overlay">
+  <div class="relative z-10 max-w-[1180px] mx-auto px-5 md:px-8 lg:px-16">
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+      <div class="font-heading text-xs uppercase tracking-boc-wider text-boc-orange font-semibold mb-4">
+        Nossos serviços
+      </div>
+      
+      <h2 class="font-display font-bold text-3xl md:text-4xl lg:text-5xl tracking-boc-tight text-boc-white leading-tight mb-6">
+        Processos técnicos para resultados excepcionais.
+      </h2>
+      
+      <div class="w-16 h-1 bg-boc-orange mx-auto" />
+    </div>
+    
+    <!-- Services Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {services.map((service, index) => (
+        <div class="group relative bg-boc-card-dark border border-white/10 rounded-boc-lg p-6 md:p-8 hover:border-boc-orange/60 transition-all duration-250 hover:-translate-y-1 hover:shadow-boc-soft">
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-12 h-12 bg-boc-orange/15 border border-boc-orange/30 rounded-boc-md flex items-center justify-center">
+              <svg class="w-6 h-6 text-boc-orange" viewBox="0 0 24 24" fill="currentColor">
+                <path d={service.icon} />
+              </svg>
+            </div>
+            
+            <div class="font-technical text-sm text-boc-gray-dark">
+              0{index + 1}
+            </div>
+          </div>
+          
+          <h3 class="font-heading font-semibold text-lg uppercase tracking-boc-wide text-boc-white mb-3">
+            {service.title}
+          </h3>
+          
+          <p class="font-body text-sm text-boc-gray leading-relaxed">
+            {service.description}
+          </p>
+          
+          <div class="absolute bottom-0 left-0 right-0 h-1 bg-boc-orange scale-x-0 group-hover:scale-x-100 transition-transform duration-250 origin-left rounded-b-boc-lg" />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

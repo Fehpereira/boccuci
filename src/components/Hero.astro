@@ -1,0 +1,105 @@
+---
+const metrics = [
+  { label: 'Detalhamento premium', icon: 'M' },
+  { label: 'Acabamento técnico', icon: 'A' },
+  { label: 'Atendimento exclusivo', icon: 'E' },
+];
+---
+
+<section id="inicio" class="relative min-h-screen flex items-center bg-boc-hero overflow-hidden">
+  <!-- Hexagon Pattern Background -->
+  <div class="absolute inset-0 hex-pattern opacity-30" />
+  
+  <!-- Gradient Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-r from-boc-black via-boc-black/90 to-transparent" />
+  
+  <!-- Geometric Accent Lines -->
+  <div class="absolute top-20 right-10 w-32 h-32 border border-boc-orange/20 rotate-45 hidden lg:block" />
+  <div class="absolute bottom-32 right-20 w-20 h-20 border border-boc-orange/30 rotate-12 hidden lg:block" />
+  
+  <!-- Content -->
+  <div class="relative z-10 max-w-[1180px] mx-auto px-5 md:px-8 lg:px-16 py-32 md:py-40">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Text Content -->
+      <div class="space-y-8">
+        <!-- Eyebrow -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-boc-orange/15 border border-boc-orange/50 rounded-full">
+          <span class="w-2 h-2 bg-boc-orange rounded-full animate-pulse" />
+          <span class="font-heading text-xs uppercase tracking-boc-wider text-boc-orange font-semibold">
+            Estética automotiva premium
+          </span>
+        </div>
+        
+        <!-- Title -->
+        <h1 class="font-display font-bold text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight tracking-boc-tight text-boc-white">
+          Excelência, precisão e cuidado para veículos exigentes.
+        </h1>
+        
+        <!-- Description -->
+        <p class="font-body text-lg md:text-xl text-boc-gray leading-relaxed max-w-xl">
+          Na Bocuccis, cada detalhe importa. Unimos técnica, conforto e atendimento humanizado para entregar uma experiência premium em estética automotiva.
+        </p>
+        
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a 
+            href="#contato" 
+            class="inline-flex items-center justify-center px-8 py-4 bg-boc-orange text-white font-heading text-sm uppercase tracking-boc-wide font-bold rounded-boc-md hover:bg-boc-orange-hover hover:shadow-boc-orange-glow transition-all duration-250 hover:-translate-y-0.5"
+          >
+            Agendar avaliação
+          </a>
+          <a 
+            href="#servicos" 
+            class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-boc-white font-heading text-sm uppercase tracking-boc-wide font-bold rounded-boc-md border border-white/20 hover:border-boc-orange/60 hover:text-boc-orange transition-all duration-250"
+          >
+            Conhecer serviços
+          </a>
+        </div>
+        
+        <!-- Metrics -->
+        <div class="grid grid-cols-3 gap-4 pt-8 border-t border-white/10">
+          {metrics.map((metric) => (
+            <div class="text-center md:text-left">
+              <div class="font-technical text-2xl md:text-3xl font-bold text-boc-orange mb-1">
+                {metric.icon}
+              </div>
+              <div class="font-heading text-xs uppercase tracking-boc-wide text-boc-gray">
+                {metric.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      <!-- Visual Placeholder -->
+      <div class="relative hidden lg:block">
+        <div class="relative aspect-[4/3] bg-gradient-to-br from-boc-charcoal to-boc-black rounded-boc-lg overflow-hidden border border-white/10">
+          <!-- Car Silhouette Placeholder -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-3/4 h-3/4 bg-gradient-to-br from-boc-graphite/50 to-transparent rounded-lg flex items-center justify-center">
+              <svg class="w-32 h-32 text-boc-orange/20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+              </svg>
+            </div>
+          </div>
+          
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-boc-black/80 via-transparent to-transparent" />
+          
+          <!-- Floating Badge -->
+          <div class="absolute bottom-6 right-6 px-4 py-3 bg-boc-black/90 backdrop-blur-sm border border-boc-orange/40 rounded-boc-md">
+            <div class="font-technical text-xs text-boc-orange uppercase tracking-boc-wider">Premium</div>
+            <div class="font-heading text-sm text-boc-white font-semibold">Estética Automotiva</div>
+          </div>
+        </div>
+        
+        <!-- Decorative Elements -->
+        <div class="absolute -top-4 -right-4 w-24 h-24 border-2 border-boc-orange/30 rounded-boc-lg" />
+        <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-boc-orange/20 rounded-full blur-xl" />
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bottom Gradient Fade -->
+  <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-boc-black to-transparent" />
+</section>

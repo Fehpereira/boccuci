@@ -1,11 +1,31 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Inspiration from '../components/Inspiration.astro';
+import Services from '../components/Services.astro';
+import Differentials from '../components/Differentials.astro';
+import Process from '../components/Process.astro';
+import Gallery from '../components/Gallery.astro';
+import FinalCTA from '../components/FinalCTA.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout 
+  title="Bocuccis Estética Automotiva | Excelência e Precisão"
+  description="Na Bocuccis, cada detalhe importa. Unimos técnica, conforto e atendimento humanizado para entregar uma experiência premium em estética automotiva."
+>
+  <Header />
+  <main>
+    <Hero />
+    <About />
+    <Inspiration />
+    <Services />
+    <Differentials />
+    <Process />
+    <Gallery />
+    <FinalCTA />
+  </main>
+  <Footer />
 </Layout>
